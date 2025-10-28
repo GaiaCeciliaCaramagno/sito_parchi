@@ -1,0 +1,2463 @@
+/* ===================== RESET DI BASE ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===================== STILI GLOBALI ===================== */
+body {
+    font-family: 'Crimson Pro', serif;
+    background-color: #ffffff;
+    color: #313834;
+    line-height: 1.5;
+}
+
+/* ===================== HEADER ===================== */
+header {
+    background-color: #3B4A3D;
+    padding: 20px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+header p a {
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;      
+    transform: translateY(7px); 
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Crimson Pro', serif;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px;
+  
+}
+
+
+#menu-toggle {
+    display: none;
+}
+
+
+
+
+/* ===================== HERO SECTION ===================== */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 10%;
+    left: 6%;
+    max-width: 50%;
+    z-index: 2;
+}
+
+/* ===================== TITOLI ===================== */
+h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    font-size: 70px;
+    margin-bottom: 2px;
+    color: #313834;
+}
+
+h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #313834;
+}
+
+h3 {
+    font-family: 'Crimson Pro', serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #313834;
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 70%;
+}
+
+h4 {
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #313834;
+}
+
+/* ===================== PARAGRAFI ===================== */
+p {
+    font-family: 'Crimson Pro', serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #313834;
+    white-space: normal;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+}
+
+/* ===================== PULSANTI ===================== */
+button.btn-scopri {
+    font-family: 'EB Garamond', serif;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3B4A3D; 
+    color: #ffffff;           
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2%;
+    
+}
+
+button.btn-scopri:hover {
+    background-color: #69816f;
+    
+}
+
+/* ===================== SEZIONI (I PARCHI / FLORA / ATTIVITÀ) ===================== */
+
+
+
+
+.Home_parchi,
+.Home_Flora_e_Fauna,
+.Home_Le_attività {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.Home_Flora_e_Fauna {
+    background-color: #E3E6E2;  
+    flex-direction: row-reverse;
+}
+
+
+.immagine_i_parchi,
+.immagine_flora_fauna,
+.immagine_le_attività {
+    flex: 0 0 44%;
+    
+}
+
+
+
+
+.img-container {
+    width: 100%;
+    height: 500px;  
+    overflow: hidden; 
+    border-radius: 10px;
+    position: relative;
+}
+
+.immagine_i_parchi img,
+.immagine_flora_fauna img,
+.immagine_le_attività img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contenuto_i_parchi,
+.contenuto_flora_fauna,
+.contenuto_le_attività {
+    flex: 1;            
+    min-width: 0;        
+}
+
+.contenuto_i_parchi p,
+.contenuto_flora_fauna p,
+.contenuto_le_attività p {
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+
+footer {
+    background-color: #3B4A3D;
+    padding: 20px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+footer .footer-privacy a {
+    color: #ffffff;
+    font-family: 'Crimson Pro', serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer .footer-copy {
+    color: #ffffff;
+    font-family: 'Crimson Pro', serif;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PAGINA PARCHI*/
+
+
+h5 {
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 2px;
+    color: #313834;
+    background-color:#E3E6E2 ;
+    padding: 0,7%;
+    text-align: center;
+}
+
+
+.Parchi_Etna,
+.Parchi_Dolomiti,
+.Parchi_Pollino,
+.Parchi_Gran_Paradiso {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.Parchi_Dolomiti, .Parchi_Gran_Paradiso {
+    background-color: #E3E6E2;  
+    
+}
+
+
+.immagine_etna,
+.immagine_dolomiti,
+.immagine_gran_paradiso,
+.immagine_pollino {
+    flex: 0 0 44%;
+    
+}
+
+
+.immagine_etna img,
+.immagine_pollino img,
+.immagine_dolomiti img,
+.immagine_gran_paradiso img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contenuto_etna,
+.contenuto_gran_paradiso,
+.contenuto_pollino,
+.contenuto_dolomiti {
+    flex: 1;           
+    min-width: 0;        
+}
+
+.contenuto_etna p,
+.contenuto_gran_paradiso p,
+.contenuto_pollino p,
+.contenuto_dolomiti p{
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*PAGINA FLORA E FAUNA*/
+
+.FloraeFauna_Etna,
+.FloraeFauna_Dolomiti,
+.FloraeFauna_Pollino,
+.FloraeFauna_Gran_Paradiso {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.FloraeFauna_Dolomiti, .FloraeFauna_Gran_Paradiso {
+    background-color: #E3E6E2;  
+    
+}
+
+
+.immaginefloraefauna_etna,
+.immaginefloraefauna_dolomiti,
+.immaginefloraefauna_gran_paradiso,
+.immaginefloraefauna_pollino {
+    flex: 0 0 44%;
+    
+}
+
+
+
+
+
+
+.immaginefloraefauna_etna img,
+.immaginefloraefauna_pollino img,
+.immaginefloraefauna_dolomiti img,
+.immaginefloraefauna_gran_paradiso img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contenutofloraefauna_etna,
+.contenutofloraefauna_gran_paradiso,
+.contenutofloraefauna_pollino,
+.contenutofloraefauna_dolomiti {
+    flex: 1;             
+    min-width: 0;        
+}
+
+.contenutofloraefauna_etna p,
+.contenutofloraefauna_gran_paradiso p,
+.contenutofloraefauna_pollino p,
+.contenutofloraefauna_dolomiti p{
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/*PAGINA ATTIVITA*/
+
+.Attivita_Etna,
+.Attivita_Dolomiti,
+.Attivita_Pollino,
+.Attivita_Gran_Paradiso {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.Attivita_Dolomiti, .Attivita_Gran_Paradiso {
+    background-color: #E3E6E2;  
+    
+}
+
+
+.immagineattivita_etna,
+.immagineattivita_dolomiti,
+.immagineattivita_gran_paradiso,
+.immagineattivita_pollino {
+    flex: 0 0 44%;
+    
+}
+
+
+
+
+
+
+.immagineattivita_etna img,
+.immagineattivita_pollino img,
+.immagineattivita_dolomiti img,
+.immagineattivita_gran_paradiso img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contenutoattivita_etna,
+.contenutoattivita_gran_paradiso,
+.contenutoattivita_pollino,
+.contenutoattivita_dolomiti {
+    flex: 1;            
+    min-width: 0;        
+}
+
+.contenutoattivita_etna p,
+.contenutoattivita_gran_paradiso p,
+.contenutoattivita_pollino p,
+.contenutoattivita_dolomiti p{
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+/*PAGINA ATTIVITA ETNA*/
+
+h6 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #313834;
+}
+
+
+
+.Attivita_attivitaEtna
+ {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+
+
+.immagineattivita_attivitaetna
+ {
+    flex: 0 0 44%;
+    
+}
+
+
+
+
+.Attivita_attivitaEtna .img-container {
+    width: 100%;
+    height: 440px;  
+    overflow: hidden; 
+    border-radius: 10px;
+    position: relative;
+}
+
+.immagineattivita_attivitaetna img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contenutoattivita_attivitaetna {
+    flex: 1;            
+    min-width: 0;        
+}
+
+.contenutoattivita_attivitaetna p
+{
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PAGINA ATTIVITA DOLOMITI*/
+
+
+.Attivita_attivitaDolomiti
+ {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+
+
+.immagineattivita_attivitadolomiti
+ {
+    flex: 0 0 44%;
+    
+}
+
+
+
+
+.Attivita_attivitaDolomiti .img-container {
+    width: 100%;
+    height: 440px;  
+    overflow: hidden; 
+    border-radius: 10px;
+    position: relative;
+}
+
+.immagineattivita_attivitadolomiti img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contenutoattivita_attivitadolomiti {
+    flex: 1;            
+    min-width: 0;     
+}
+
+.contenutoattivita_attivitadolomiti p
+{
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*PAGINA ATTIVITA POLLINO*/
+
+
+.Attivita_attivitaPollino
+ {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+
+
+
+.immagineattivita_attivitapollino
+ {
+    flex: 0 0 44%;
+    
+}
+
+
+
+
+.Attivita_attivitaPollino .img-container {
+    width: 100%;
+    height: 440px;  
+    overflow: hidden; 
+    border-radius: 10px;
+    position: relative;
+}
+
+.immagineattivita_attivitapollino img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contenutoattivita_attivitapollino {
+    flex: 1;           
+    min-width: 0;       
+}
+
+.contenutoattivita_attivitapollino p
+{
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+/*PAGINA ATTIVITA GRAN PARADISO*/
+
+.Attivita_attivitaGranParadiso
+ {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+
+
+.immagineattivita_attivitagranparadiso
+ {
+    flex: 0 0 44%;
+    
+}
+
+
+
+
+.Attivita_attivitaGranParadiso .img-container {
+    width: 100%;
+    height: 440px;  
+    overflow: hidden; 
+    border-radius: 10px;
+    position: relative;
+}
+
+.immagineattivita_attivitagranparadiso img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contenutoattivita_attivitagranparadiso {
+    flex: 1;             
+    min-width: 0;        
+}
+
+.contenutoattivita_attivitagranparadiso p
+{
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* PAGINA FLORA E FAUNA ETNA*/
+
+.FloraeFauna_floraefaunaEtna
+ {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+
+
+
+.immaginefloraefauna_floraefaunaetna
+ {
+    flex: 0 0 44%;
+    
+}
+
+
+
+
+.FloraeFauna_floraefaunaEtna .img-container {
+    width: 100%;
+    height: 440px;  
+    overflow: hidden; 
+    border-radius: 10px;
+    position: relative;
+}
+
+.immaginefloraefauna_floraefaunaetna img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contenutofloraefauna_floraefaunaetna {
+    flex: 1;             
+    min-width: 0;      
+}
+
+.contenutofloraefauna_floraefaunaetna p
+{
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/*PAGINA FLORA E FAUNA DOLOMITI*/
+
+
+.FloraeFauna_floraefaunaDolomiti
+ {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+
+
+
+.immaginefloraefauna_floraefaunadolomiti
+ {
+    flex: 0 0 44%;
+    
+}
+
+
+
+
+.FloraeFauna_floraefaunaDolomiti .img-container {
+    width: 100%;
+    height: 440px;  
+    overflow: hidden; 
+    border-radius: 10px;
+    position: relative;
+}
+
+.immaginefloraefauna_floraefaunadolomiti img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contenutofloraefauna_floraefaunadolomiti {
+    flex: 1;            
+    min-width: 0;        
+}
+
+.contenutofloraefauna_floraefaunadolomiti p
+{
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PAGINA FLORA E FAUNA POLLINO*/
+
+.FloraeFauna_floraefaunaPollino
+ {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+
+
+
+.immaginefloraefauna_floraefaunapollino
+ {
+    flex: 0 0 44%;
+    
+}
+
+
+
+
+.FloraeFauna_floraefaunaPollino .img-container {
+    width: 100%;
+    height: 440px;  
+    overflow: hidden; 
+    border-radius: 10px;
+    position: relative;
+}
+
+.immaginefloraefauna_floraefaunapollino img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contenutofloraefauna_floraefaunapollino {
+    flex: 1;             
+    min-width: 0;       
+}
+
+.contenutofloraefauna_floraefaunapollino p
+{
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PAGINA FLORA E FAUNA GRAN PARADISO*/
+
+.FloraeFauna_floraefaunaGran_Paradiso
+ {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+
+
+.immaginefloraefauna_floraefaunagran_paradiso
+ {
+    flex: 0 0 44%;
+    
+}
+
+
+
+
+.FloraeFauna_floraefaunaGran_Paradiso .img-container {
+    width: 100%;
+    height: 440px; 
+    overflow: hidden; 
+    border-radius: 10px;
+    position: relative;
+}
+
+.immaginefloraefauna_floraefaunagran_paradiso img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contenutofloraefauna_floraefauna_granparadiso {
+    flex: 1;            
+    min-width: 0;        
+}
+
+.contenutofloraefauna_floraefauna_granparadiso p
+{
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+
+
+
+
+
+/* ===================================
+   PAGINA PARCO ETNA
+   =================================== */
+
+/* ======================
+   SEZIONE INIZIALE
+   ====================== */
+.parcoetna {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parcoetna-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+    
+}
+
+
+.parcoetna-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+.parcoetna-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    word-wrap: break-word;
+    line-height: 1.2; 
+}
+
+.parcoetna-text h4,
+.parcoetna-text h3 {
+    margin: 0;
+    line-height: 1.0; 
+}
+
+.parcoetna-text h4 {
+    
+    margin-bottom: 15px; 
+    line-height: 1.2;
+}
+
+.parcoetna-text h3 {
+    
+    font-weight: 400;
+    line-height: 1.2; 
+}
+
+
+.parcoetna .parcoetna-text h3,
+.parcoetna .parcoetna-text h4 {
+    color: white;
+}
+
+
+/* ======================
+   INTRODUZIONE ETNA
+   ====================== */
+
+.Parco_introduzione_etna {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.immagine_introduzione-etna {
+    flex: 0 0 44%;
+}
+
+.immagine_introduzione-etna .img-container {
+    width: 100%;
+    height: 350px; 
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.immagine_introduzione-etna img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenuto_introduzione_parchi {
+    flex: 1;
+    min-width: 0;
+    line-height: 1.5;
+}
+
+/* ======================
+   SEZIONI PRINCIPALI ETNA
+   ====================== */
+
+.Parco_etna1,
+.Parco_etna2,
+.Parco_etna3,
+.Parco_etna4,
+.Parco_etna5,
+.Parco_etna6 {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+
+.Parco_etna1,
+.Parco_etna4 {
+    flex-direction: row-reverse;
+    background-color: #E3E6E2; 
+}
+
+
+.immagine_etna1,
+.immagine_etna2,
+.immagine_etna3,
+.immagine_etna4,
+.immagine_etna5,
+.immagine_etna6 {
+    flex: 0 0 44%;
+}
+
+
+.Parco_etna1 .img-container,
+.Parco_etna2 .img-container,
+.Parco_etna3 .img-container,
+.Parco_etna4 .img-container,
+.Parco_etna5 .img-container,
+.Parco_etna6 .img-container {
+    height: 650px;
+}
+
+
+.Parco_etna_scopridipiù .img-container {
+    height: 500px;
+    
+}
+
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.paragrafo1_etna,
+.paragrafo2_etna,
+.paragrafo3_etna,
+.paragrafo4_etna,
+.paragrafo5_etna,
+.paragrafo6_etna {
+    flex: 1;
+    min-width: 0;
+}
+
+.paragrafo1_etna p,
+.paragrafo2_etna p,
+.paragrafo3_etna p,
+.paragrafo4_etna p,
+.paragrafo5_etna p,
+.paragrafo6_etna p {
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    line-height: 1.5;
+}
+
+/* ======================
+   SCOPRI DI PIÙ 
+   ====================== */
+
+.Parco_etna_scopridipiù {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 10px;    
+    background-color: #E3E6E2;
+    position: relative;
+    padding-top: 50px !important;
+    margin-top: 0 !important;
+    column-gap: 110px;      
+    padding: 120px 12%;      
+  
+}
+
+
+.scopri-sezione {
+    color: #2c5332; 
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left; 
+    margin-bottom: 40px;
+    width: 100%;
+    
+}
+
+
+.immagine_etnafloraefauna,
+.immagine_etnaattivita {
+    flex: 0 0 44%;
+    position: relative;
+}
+
+
+
+.immagine_etnafloraefauna .img-container::after,
+.immagine_etnaattivita .img-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+
+
+.overlay-text:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+
+}
+
+ 
+
+
+
+
+
+.immagine_etnafloraefauna .overlay-text,
+.immagine_etnaattivita .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    z-index: 2;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.immagine_etnafloraefauna .overlay-text:hover,
+.immagine_etnaattivita .overlay-text:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+
+
+
+
+.immagine_etnafloraefauna,
+.immagine_etnaattivita {
+    flex: 0 0 45%;        
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+/* ===================================
+   PAGINA PARCO DOLOMITI
+   =================================== */
+
+/* ======================
+   SEZIONE INIZIALE
+   ====================== */
+
+.parcodolomiti {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.parcodolomiti-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); 
+    z-index: 1;
+}
+
+.parcodolomiti-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    
+}
+
+
+.parcodolomiti-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    word-wrap: break-word;
+    line-height: 1.2; 
+}
+
+.parcodolomiti-text h4,
+.parcodolomiti-text h3 {
+    margin: 0;
+    line-height: 1.0; 
+}
+
+.parcodolomiti-text h4 {
+    
+    margin-bottom: 15px; 
+    line-height: 1.2;
+}
+
+.parcodolomiti-text h3 {
+    
+    font-weight: 400;
+    line-height: 1.2; 
+}
+
+
+.parcodolomiti .parcodolomiti-text h3,
+.parcodolomiti .parcodolomiti-text h4 {
+    color: white;
+}
+
+/* ======================
+   INTRODUZIONE DOLOMITI
+   ====================== */
+
+.Parco_introduzione_dolomiti {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.immagine_introduzione-dolomiti {
+    flex: 0 0 44%;
+}
+
+.immagine_introduzione-dolomiti .img-container {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.immagine_introduzione-dolomiti img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ======================
+   SEZIONI PRINCIPALI DOLOMITI
+   ====================== */
+
+.Parco_dolomiti1,
+.Parco_dolomiti2,
+.Parco_dolomiti3,
+.Parco_dolomiti4,
+.Parco_dolomiti5,
+.Parco_dolomiti6,
+.Parco_dolomiti7 {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+
+.Parco_dolomiti1,
+.Parco_dolomiti4,
+.Parco_dolomiti7 {
+    flex-direction: row-reverse;
+}
+
+
+.Parco_dolomiti7,.Parco_dolomiti4, .Parco_dolomiti1{
+    background-color: #E3E6E2;
+}
+
+
+.immagine_dolomiti1,
+.immagine_dolomiti2,
+.immagine_dolomiti3,
+.immagine_dolomiti4,
+.immagine_dolomiti5,
+.immagine_dolomiti6,
+.immagine_dolomiti7 {
+    flex: 0 0 44%;
+}
+
+
+.Parco_dolomiti1 .img-container,
+.Parco_dolomiti2 .img-container,
+.Parco_dolomiti3 .img-container,
+.Parco_dolomiti4 .img-container,
+.Parco_dolomiti5 .img-container,
+.Parco_dolomiti6 .img-container,
+.Parco_dolomiti7 .img-container {
+    height: 650px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.paragrafo1_dolomiti,
+.paragrafo2_dolomiti,
+.paragrafo3_dolomiti,
+.paragrafo4_dolomiti,
+.paragrafo5_dolomiti,
+.paragrafo6_dolomiti,
+.paragrafo7_dolomiti {
+    flex: 1;
+    min-width: 0;
+}
+
+.paragrafo1_dolomiti p,
+.paragrafo2_dolomiti p,
+.paragrafo3_dolomiti p,
+.paragrafo4_dolomiti p,
+.paragrafo5_dolomiti p,
+.paragrafo6_dolomiti p,
+.paragrafo7_dolomiti p {
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    line-height: 1.5;
+}
+
+/* ======================
+   SCOPRI DI PIÙ
+   ====================== */
+
+.Parco_dolomiti_scopridipiù {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 110px;
+    row-gap: 10px;
+    padding: 120px 12%;
+    background-color: #ffffff; 
+    position: relative;
+    padding-top: 50px !important;
+    margin-top: 0 !important;
+}
+
+
+.scopri-sezione {
+    color: #2c5332;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+
+.immagine_dolomitifloraefauna,
+.immagine_dolomitiattivita {
+    flex: 0 0 45%;
+    position: relative;
+}
+
+
+.Parco_dolomiti_scopridipiù .img-container {
+    height: 500px;
+}
+
+
+.immagine_dolomitifloraefauna .img-container::after,
+.immagine_dolomitiattivita .img-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+
+.immagine_dolomitifloraefauna .overlay-text,
+.immagine_dolomitiattivita .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    z-index: 2;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.immagine_dolomitifloraefauna .overlay-text:hover,
+.immagine_dolomitiattivita .overlay-text:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================
+   PAGINA PARCO POLLINO
+   =================================== */
+
+/* ======================
+   SEZIONE INIZIALE
+   ====================== */
+
+.parcopollino {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.parcopollino-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); 
+    z-index: 1;
+}
+
+.parcopollino-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    
+}
+
+
+.parcopollino-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    word-wrap: break-word;
+    line-height: 1.2; 
+}
+
+.parcopollino-text h4,
+.parcopollino-text h3 {
+    margin: 0;
+    line-height: 1.0; 
+}
+
+.parcopollino-text h4 {
+    
+    margin-bottom: 15px; 
+    line-height: 1.2;
+}
+
+.parcopollino-text h3 {
+    
+    font-weight: 400;
+    line-height: 1.2; 
+}
+
+
+.parcopollino .parcopollino-text h3,
+.parcopollino .parcopollino-text h4 {
+    color: white;
+}
+
+/* ======================
+   INTRODUZIONE DOLOMITI
+   ====================== */
+
+.Parco_introduzione_pollino {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.immagine_introduzione-pollino {
+    flex: 0 0 44%;
+}
+
+.immagine_introduzione-pollino .img-container {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.immagine_introduzione-pollino img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ======================
+   SEZIONI PRINCIPALI DOLOMITI
+   ====================== */
+.Parco_pollino1,
+.Parco_pollino2,
+.Parco_pollino3,
+.Parco_pollino4,
+.Parco_pollino5,
+.Parco_pollino6,
+.Parco_pollino7 {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+
+.Parco_pollino1,
+.Parco_pollino4,
+.Parco_pollino7 {
+    flex-direction: row-reverse;
+}
+
+
+.Parco_pollino7,.Parco_pollino4, .Parco_pollino1{
+    background-color: #E3E6E2;
+}
+
+
+.immagine_pollino1,
+.immagine_pollino2,
+.immagine_pollino3,
+.immagine_pollino4,
+.immagine_pollino5,
+.immagine_pollino6,
+.immagine_pollino7 {
+    flex: 0 0 44%;
+}
+
+
+.Parco_pollino1 .img-container,
+.Parco_pollino2 .img-container,
+.Parco_pollino3 .img-container,
+.Parco_pollino4 .img-container,
+.Parco_pollino5 .img-container,
+.Parco_pollino6 .img-container,
+.Parco_pollino7 .img-container {
+    height: 650px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.paragrafo1_pollino,
+.paragrafo2_pollino,
+.paragrafo3_pollino,
+.paragrafo4_pollino,
+.paragrafo5_pollino,
+.paragrafo6_pollino,
+.paragrafo7_pollino {
+    flex: 1;
+    min-width: 0;
+}
+
+.paragrafo1_pollino p,
+.paragrafo2_pollino p,
+.paragrafo3_pollino p,
+.paragrafo4_pollino p,
+.paragrafo5_pollino p,
+.paragrafo6_pollino p,
+.paragrafo7_pollino p {
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    line-height: 1.5;
+}
+
+/* ======================
+   SCOPRI DI PIÙ
+   ====================== */
+
+.Parco_pollino_scopridipiù {
+ display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 110px;
+    row-gap: 10px;
+    padding: 120px 12%;
+    background-color: #ffffff; 
+    position: relative;
+    padding-top: 50px !important;
+    margin-top: 0 !important;
+}
+
+
+.scopri-sezione {
+    color: #2c5332;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+
+.immagine_pollinofloraefauna,
+.immagine_pollinoattivita {
+    flex: 0 0 45%;
+    position: relative;
+}
+
+
+.Parco_pollino_scopridipiù .img-container {
+    height: 500px;
+}
+
+
+.immagine_pollinofloraefauna .img-container::after,
+.immagine_pollinoattivita .img-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+
+.immagine_pollinofloraefauna .overlay-text,
+.immagine_pollinoattivita .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    z-index: 2;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.immagine_pollinofloraefauna .overlay-text:hover,
+.immagine_pollinoattivita .overlay-text:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================
+   PAGINA PARCO GRAN PARADISO
+   =================================== */
+
+/* ======================
+   SEZIONE INIZIALE
+   ====================== */
+.parcogranparadiso {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parcogranparadiso-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); 
+    z-index: 1;
+}
+
+.parcogranparadiso-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.parcogranparadiso-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    word-wrap: break-word;
+    line-height: 1.2; 
+}
+
+.parcogranparadiso-text h4,
+.parcogranparadiso-text h3 {
+    margin: 0;
+    line-height: 1.0;
+}
+
+.parcogranparadiso-text h4 {
+    margin-bottom: 15px; 
+    line-height: 1.2;
+}
+
+.parcogranparadiso-text h3 {
+    font-weight: 400;
+    line-height: 1.2; 
+}
+
+.parcogranparadiso .parcogranparadiso-text h3,
+.parcogranparadiso .parcogranparadiso-text h4 {
+    color: white;
+}
+
+/* ======================
+   INTRODUZIONE GRAN PARADISO
+   ====================== */
+
+.Parco_introduzione_granparadiso {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.immagine_introduzione-granparadiso {
+    flex: 0 0 44%;
+}
+
+.immagine_introduzione-granparadiso .img-container {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.immagine_introduzione-granparadiso img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ======================
+   SEZIONI PRINCIPALI GRAN PARADISO
+   ====================== */
+
+.Parco_granparadiso1,
+.Parco_granparadiso2,
+.Parco_granparadiso3,
+.Parco_granparadiso4,
+.Parco_granparadiso5,
+.Parco_granparadiso6,
+.Parco_granparadiso7 {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    padding: 120px;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+
+.Parco_granparadiso1,
+.Parco_granparadiso4,
+.Parco_granparadiso7 {
+    flex-direction: row-reverse;
+}
+
+
+.Parco_granparadiso7,
+.Parco_granparadiso4,
+.Parco_granparadiso1 {
+    background-color: #E3E6E2;
+}
+
+
+.immagine_granparadiso1,
+.immagine_granparadiso2,
+.immagine_granparadiso3,
+.immagine_granparadiso4,
+.immagine_granparadiso5,
+.immagine_granparadiso6,
+.immagine_granparadiso7 {
+    flex: 0 0 44%;
+}
+
+
+
+.Parco_granparadiso1 .img-container img {
+    transform: scale(1.2); 
+    object-fit: cover;   
+    transition: transform 0.3s ease;
+}
+
+
+
+
+.Parco_granparadiso1 .img-container,
+.Parco_granparadiso2 .img-container,
+.Parco_granparadiso3 .img-container,
+.Parco_granparadiso4 .img-container,
+.Parco_granparadiso5 .img-container,
+.Parco_granparadiso6 .img-container,
+.Parco_granparadiso7 .img-container {
+    height: 650px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.paragrafo1_granparadiso,
+.paragrafo2_granparadiso,
+.paragrafo3_granparadiso,
+.paragrafo4_granparadiso,
+.paragrafo5_granparadiso,
+.paragrafo6_granparadiso,
+.paragrafo7_granparadiso {
+    flex: 1;
+    min-width: 0;
+}
+
+.paragrafo1_granparadiso p,
+.paragrafo2_granparadiso p,
+.paragrafo3_granparadiso p,
+.paragrafo4_granparadiso p,
+.paragrafo5_granparadiso p,
+.paragrafo6_granparadiso p,
+.paragrafo7_granparadiso p {
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    line-height: 1.5;
+}
+
+/* ======================
+   SCOPRI DI PIÙ 
+   ====================== */
+
+.Parco_granparadiso_scopridipiù {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 110px;
+    row-gap: 10px;
+    padding: 120px 12%;
+    background-color: #ffffff; 
+    position: relative;
+    padding-top: 50px !important;
+    margin-top: 0 !important;
+}
+
+
+.scopri-sezione {
+    color: #2c5332;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+
+.immagine_granparadisofloraefauna,
+.immagine_granparadisoattivita {
+    flex: 0 0 45%;
+    position: relative;
+}
+
+
+.Parco_granparadiso_scopridipiù .img-container {
+    height: 500px;
+}
+
+
+.immagine_granparadisofloraefauna .img-container::after,
+.immagine_granparadisoattivita .img-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+
+.immagine_granparadisofloraefauna .overlay-text,
+.immagine_granparadisoattivita .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    z-index: 2;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.immagine_granparadisofloraefauna .overlay-text:hover,
+.immagine_granparadisoattivita .overlay-text:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   RESPONSIVE MENU & CONTENUTI
+   =========================== */
+
+@media (max-width: 900px) {
+  /* Hamburger visibile */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 200;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff; 
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+
+  
+  #menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Menu nascosto di default */
+  nav ul {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #E3E6E2;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% ); 
+    padding: 20px 0;
+    border-top: 2px solid #2c5332;
+    display: none;
+    z-index: 100;
+    list-style: none;
+  }
+
+
+
+
+  /* Mostra il menu quando il checkbox è attivato */
+  #menu-toggle:checked ~ nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #2c5332;
+  }
+
+  
+
+header {
+        padding: 20px 60px; 
+    }
+
+    header p {
+        margin-left: -10px; 
+    }
+
+
+  section, article, .content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .content-item {
+    flex: 1 1 100%; 
+  }
+}
+
+
+
+
+
+/* ===================== RESPONSIVE MOBILE ===================== */
+@media (max-width: 900px) {
+
+    /* Tutte le sezioni principali dei parchi, flora, attività e Home */
+    .Parchi_Etna, .Parchi_Dolomiti, .Parchi_Pollino, .Parchi_Gran_Paradiso,
+    .FloraeFauna_Etna, .FloraeFauna_Dolomiti, .FloraeFauna_Pollino, .FloraeFauna_Gran_Paradiso,
+    .Attivita_Etna, .Attivita_Dolomiti, .Attivita_Pollino, .Attivita_Gran_Paradiso,
+    .Attivita_attivitaEtna, .Attivita_attivitaDolomiti, .Attivita_attivitaPollino, .Attivita_attivitaGranParadiso,
+    .FloraeFauna_floraefaunaEtna, .FloraeFauna_floraefaunaDolomiti, .FloraeFauna_floraefaunaPollino, .FloraeFauna_floraefaunaGran_Paradiso,
+    .Parco_introduzione_etna, .Parco_introduzione_dolomiti, .Parco_introduzione_pollino, .Parco_introduzione_granparadiso,
+    .Parco_etna1, .Parco_etna2, .Parco_etna3, .Parco_etna4, .Parco_etna5, .Parco_etna6,
+    .Parco_dolomiti1, .Parco_dolomiti2, .Parco_dolomiti3, .Parco_dolomiti4, .Parco_dolomiti5, .Parco_dolomiti6, .Parco_dolomiti7,
+    .Parco_pollino1, .Parco_pollino2, .Parco_pollino3, .Parco_pollino4, .Parco_pollino5, .Parco_pollino6, .Parco_pollino7,
+    .Parco_granparadiso1, .Parco_granparadiso2, .Parco_granparadiso3, .Parco_granparadiso4, .Parco_granparadiso5, .Parco_granparadiso6, .Parco_granparadiso7,
+    .Parco_etna_scopridipiù, .Parco_dolomiti_scopridipiù, .Parco_pollino_scopridipiù, .Parco_granparadiso_scopridipiù,
+    .Home_parchi, .Home_Flora_e_Fauna, .Home_Le_attività {
+        flex-direction: column;
+        gap: 25px;
+        padding: 60px 8%;
+    }
+
+    /* Tutte le immagini principali delle sezioni e Home */
+    .immagine_etna, .immagine_dolomiti, .immagine_pollino, .immagine_gran_paradiso,
+    .immaginefloraefauna_etna, .immaginefloraefauna_dolomiti, .immaginefloraefauna_pollino, .immaginefloraefauna_gran_paradiso,
+    .immagineattivita_etna, .immagineattivita_dolomiti, .immagineattivita_pollino, .immagineattivita_gran_paradiso,
+    .immagineattivita_attivitaetna, .immagineattivita_attivitadolomiti, .immagineattivita_attivitapollino, .immagineattivita_attivitagranparadiso,
+    .immaginefloraefauna_floraefaunaetna, .immaginefloraefauna_floraefaunaDolomiti, .immaginefloraefauna_floraefaunapollino, .immaginefloraefauna_floraefauna_granparadiso,
+    .immagine_introduzione-etna, .immagine_introduzione-dolomiti, .immagine_introduzione-pollino, .immagine_introduzione-granparadiso,
+    .immagine_etna1, .immagine_etna2, .immagine_etna3, .immagine_etna4, .immagine_etna5, .immagine_etna6,
+    .immagine_dolomiti1, .immagine_dolomiti2, .immagine_dolomiti3, .immagine_dolomiti4, .immagine_dolomiti5, .immagine_dolomiti6, .immagine_dolomiti7,
+    .immagine_pollino1, .immagine_pollino2, .immagine_pollino3, .immagine_pollino4, .immagine_pollino5, .immagine_pollino6, .immagine_pollino7,
+    .immagine_granparadiso1, .immagine_granparadiso2, .immagine_granparadiso3, .immagine_granparadiso4, .immagine_granparadiso5, .immagine_granparadiso6, .immagine_granparadiso7,
+    .immagine_etnafloraefauna, .immagine_etnaattivita,
+    .immagine_dolomitifloraefauna, .immagine_dolomitiattivita,
+    .immagine_pollinofloraefauna, .immagine_pollinoattivita,
+    .immagine_granparadisofloraefauna, .immagine_granparadisoattivita,
+    .immagine_i_parchi, .immagine_flora_fauna, .immagine_le_attività,
+    .img-container {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Colonna contenuto testi delle sezioni e Home */
+    .contenuto_etna, .contenuto_gran_paradiso, .contenuto_pollino, .contenuto_dolomiti,
+    .contenutofloraefauna_etna, .contenutofloraefauna_gran_paradiso, .contenutofloraefauna_pollino, .contenutofloraefauna_dolomiti,
+    .contenutoattivita_etna, .contenutoattivita_gran_paradiso, .contenutoattivita_pollino, .contenutoattivita_dolomiti,
+    .contenutoattivita_attivitaetna, .contenutoattivita_attivitadolomiti, .contenutoattivita_attivitapollino, .contenutoattivita_attivitagranparadiso,
+    .contenutofloraefauna_floraefaunaetna, .contenutofloraefauna_floraefaunaDolomiti, .contenutofloraefauna_floraefaunapollino, .contenutofloraefauna_floraefauna_granparadiso,
+    .contenuto_i_parchi, .contenuto_flora_fauna, .contenuto_le_attività,
+    .paragrafo1_etna, .paragrafo2_etna, .paragrafo3_etna, .paragrafo4_etna, .paragrafo5_etna, .paragrafo6_etna,
+    .paragrafo1_dolomiti, .paragrafo2_dolomiti, .paragrafo3_dolomiti, .paragrafo4_dolomiti, .paragrafo5_dolomiti, .paragrafo6_dolomiti, .paragrafo7_dolomiti,
+    .paragrafo1_pollino, .paragrafo2_pollino, .paragrafo3_pollino, .paragrafo4_pollino, .paragrafo5_pollino, .paragrafo6_pollino, .paragrafo7_pollino,
+    .paragrafo1_granparadiso, .paragrafo2_granparadiso, .paragrafo3_granparadiso, .paragrafo4_granparadiso, .paragrafo5_granparadiso, .paragrafo6_granparadiso, .paragrafo7_granparadiso {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+}
+
+
+
+
+/* ===================== HERO SECTION ===================== */
+@media (max-width: 900px) {
+
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 50vh; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 8%;      
+        left: 6%;
+        max-width: 62%; 
+        z-index: 2;
+    }
+
+    /* ===================== TITOLI ===================== */
+    h1 {
+        font-family: 'EB Garamond', serif;
+        font-weight: bold;
+        font-size: 50px;  
+        margin-bottom: 2px;
+        color: #313834;
+    }
+
+    h2 {
+        font-family: 'EB Garamond', serif;
+        font-weight: 600;
+        font-size: 24px;  
+        margin-bottom: 10px; 
+        color: #313834;
+    }
+
+    h3 {
+        font-family: 'Crimson Pro', serif;
+        font-weight: 400;
+        font-size: 18px; 
+        margin-bottom: 10px;
+        color: #313834;
+        white-space: normal;
+        overflow-wrap: break-word;
+        max-width: 65%;  
+    }
+
+}
+
+
+
+
+
+/* ===================== HERO SECTION ===================== */
+@media (max-width: 808px) {
+
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 60vh; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 8%;      
+        left: 6%;
+        max-width: 100%; 
+        z-index: 2;
+    }
+
+    /* ===================== TITOLI ===================== */
+    h1 {
+        font-family: 'EB Garamond', serif;
+        font-weight: bold;
+        font-size: 35px;  
+        margin-bottom: 2px;
+        color: #313834;
+    }
+
+    h2 {
+        font-family: 'EB Garamond', serif;
+        font-weight: 600;
+        font-size: 18px; 
+        margin-bottom: 10px; 
+        color: #313834;
+    }
+
+    h3 {
+        font-family: 'Crimson Pro', serif;
+        font-weight: 400;
+        font-size: 18px;  
+        margin-bottom: 10px;
+        color: #313834;
+        white-space: normal;
+        overflow-wrap: break-word;
+        max-width: 90%; 
+    }
+
+
+
+h4 {
+   
+    font-size: 45px;
+   
+   
+}
+
+/* ===================== PARAGRAFI ===================== */
+p {
+    
+    font-size: 20px;
+   
+}
+
+/* ===================== PULSANTI ===================== */
+button.btn-scopri {
+   
+    font-size: 20px;
+    
+}
+
+
+
+}
